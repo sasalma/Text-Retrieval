@@ -62,6 +62,7 @@ object assignment {
 
 
       // Print the answer here
+      if(result.length==0) println("{}")
       index = 0;
       for( index <- 0 until result.length){
          println( "Doc " + result(index) );
