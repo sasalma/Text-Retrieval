@@ -1,0 +1,1 @@
+scalac -classpath /data/Dropbox/sammi/spring2019/csc583/code/Text-Retrieval/assignment2/src/main/scala/edu/arizona/cs/target/scala-2.12/classes -bootclasspath /home/iqbal/.sbt/boot/scala-2.12.7/lib/scala-library.jar /data/Dropbox/sammi/spring2019/csc583/code/Text-Retrieval/assignment2/src/main/scala/edu/arizona/cs/AssignmentTwo.scala
