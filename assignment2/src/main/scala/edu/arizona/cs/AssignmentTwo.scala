@@ -17,50 +17,40 @@ object AssignmentTwo {
       }
 
       val invertedIndex = new HashMap[String,  List[Int]].withDefaultValue(Nil)
-      //val positionIndex = new HashMap[String,  List[Int]].withDefaultValue(Nil)
-
       val filename = "data.txt"
       for (line <- Source.fromFile(filename).getLines) {
-          //println(line)
           var words = line.split("\t")
           var i=0
           var docid = ""
           for(parts<- words )
             {
-              if(i==0){
-              //  println("it is doc id")
+              if(i==0){ //  println("it is doc id")
                 i=1
                 docid = parts
               }
-              else{
-              //  println("tokens")
+              else{ // collect the terms
                 i=0
                 var position=0;
                 for(token <- parts.split(" ")){
                   position = position + 1
-                  //println(token)
                   var docIDint = docid.substring(3, docid.length).toInt
                   invertedIndex(token) ::= docIDint
                   positionIndex(token+docIDint) ::= position
                 }
               }
-            //  println(parts)
             }
-
       }
 
-
+      // sort invertedIndex
       for(v <- invertedIndex.keys){
-        //println(v)
         invertedIndex(v) = invertedIndex(v).sorted
-        //println(v + "   " + invertedIndex(v))
       }
+      // sort positionIndex
       for(v <- positionIndex.keys){
-        //println(v)
         positionIndex(v) = positionIndex(v).sorted
-        //println(v + "   " + positionIndex(v))
       }
 
+      // evaluate the query
       var k = args(1).substring(1, args(1).length).toInt
       var direction = 2
       if(args.length>3 && args(3)=="1") direction=1
@@ -133,16 +123,13 @@ object AssignmentTwo {
         else index_p2 = index_p2+1
       }
 
-      // sort the positional indexes and print the output
+      // reverse the positional indexes and print the output
       for(v <- answer.keys){
         //println("Doc " + v)
         answer(v) = answer(v).reverse
         println("Doc " + v + ": " + answer(v))
       }
-
-
-
-return 0
-}
+      return 0
+  }
 
 }
