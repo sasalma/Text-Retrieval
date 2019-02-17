@@ -1,7 +1,7 @@
-[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/code/Text-Retrieval/assignment2/src/main/scala/edu/arizona/cs/AssignmentTwo.scala:133:33: '<-' expected but ')' found.[0m
-[0m[[0m[31merror[0m] [0m[0m                for(ps->listTemp){[0m
-[0m[[0m[31merror[0m] [0m[0m                                ^[0m
-[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/code/Text-Retrieval/assignment2/src/main/scala/edu/arizona/cs/AssignmentTwo.scala:137:13: illegal start of simple expression[0m
-[0m[[0m[31merror[0m] [0m[0m            }[0m
-[0m[[0m[31merror[0m] [0m[0m            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/code/Text-Retrieval/assignment2/src/main/scala/edu/arizona/cs/AssignmentTwo.scala:102:21: ';' expected but 'else' found.[0m
+[0m[[0m[31merror[0m] [0m[0m                    else if(positionIndex( t2 + p2(index_p2) )(index_pp2) >  positionIndex( t1 + p1(index_p1) )(index_pp1)) loopbreak.break;[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/code/Text-Retrieval/assignment2/src/main/scala/edu/arizona/cs/AssignmentTwo.scala:109:19: ';' expected but 'else' found.[0m
+[0m[[0m[31merror[0m] [0m[0m                  else if(positionIndex( t2 + p2(index_p2) )(index_pp2) >  positionIndex( t1 + p1(index_p1) )(index_pp1)) loopbreak.break;[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
 [0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

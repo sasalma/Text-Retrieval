@@ -4,20 +4,17 @@ import scala.io.Source
 import scala.collection.mutable.HashMap
 import scala.collection.mutable.ListBuffer
 import scala.util.control._
-//import scala.collection.mutable.LinkedList
-
-//var positionIndex //= new HashMap[String,  List[Int]].withDefaultValue(Nil)
 
 object AssignmentTwo {
   val positionIndex = new HashMap[String,  List[Int]].withDefaultValue(Nil)
 
     def main(args: Array[String]) {
-      /*
+
       if(args.length==0) {println("No query given"); return;}
-      if(args.length < 3 || (args.length%2==0)){
+      if(args.length < 3){
         println("Invalid query. Please try again with a valid query")
         return
-      }*/
+      }
 
       val invertedIndex = new HashMap[String,  List[Int]].withDefaultValue(Nil)
       //val positionIndex = new HashMap[String,  List[Int]].withDefaultValue(Nil)
@@ -52,90 +49,82 @@ object AssignmentTwo {
 
       }
 
-/*
+
       for(v <- invertedIndex.keys){
         //println(v)
         invertedIndex(v) = invertedIndex(v).sorted
-        println(v + "   " + invertedIndex(v))
-      }*/
+        //println(v + "   " + invertedIndex(v))
+      }
+      for(v <- positionIndex.keys){
+        //println(v)
+        positionIndex(v) = positionIndex(v).sorted
+        //println(v + "   " + positionIndex(v))
+      }
 
-
-
-      //var result: List[Int] =List()
-      var index = 0;
       var k = args(1).substring(1, args(1).length).toInt
-      //var result = new HashMap[Int,  List[Int]].withDefaultValue(Nil)
-
-      var result = PositionalIntersect(args(0), invertedIndex(args(0)) , args(2), invertedIndex(args(2)), k )
-      /*
-      result = invertedIndex(args(0))
-      for( index <- 1 until (args.length-1) by 2){
-        //println("index= "+index + "args(index)= " +args(index))
-        if(args(index).toUpperCase()=="AND") result = Intersect(result,invertedIndex(args(index+1)))
-         else if(args(index).toUpperCase()=="OR") result = UNION(result,invertedIndex(args(index+1)))
-      //  println(result)
-
-    }*/
-
-/*
-      // Print the answer here
-      if(result.length==0) println("{}")
-
-      index = 0;
-      for( index <- 0 until result.length){
-         println( "Doc " + result(index) );
-      }*/
-
+      var direction = 2
+      if(args.length>3 && args(3)=="1") direction=1
+      var result = PositionalIntersect(args(0), invertedIndex(args(0)) , args(2), invertedIndex(args(2)), k, direction )
     }
 
 
 
 
-    def PositionalIntersect(t1:String, p1:List[Int], t2:String, p2:List[Int], k:Int ) : Int = {
-      println(p1)
-      println(p2)
-      println("k= " + k)
+    def PositionalIntersect(t1:String, p1:List[Int], t2:String, p2:List[Int], k:Int, direction:Int ) : Int = {
+      //println(p1)
+      //println(p2)
+      //println("k= " + k)
+      println("direction = "+ direction)
       val answer = new HashMap[Int,  List[Int]].withDefaultValue(Nil)
-      /*
-      for(v <- positionIndex.keys){
-        //println(v)
-        positionIndex(v) = positionIndex(v).sorted
-        println(v + "   " + positionIndex(v))
-      }*/
-
       var index_p1=0
       var index_p2=0
       var index_pp1=0
       var index_pp2=0
       val listTemp = new ListBuffer[Int]()
-      val pp1:List[Int] = positionIndex( t1 + p1(index_p1) )
-      val pp2:List[Int] = positionIndex( t2 + p2(index_p2) )
-
       val loopbreak = new Breaks
 
       while (index_p1 < p1.length && index_p2 < p2.length){
         if (p1(index_p1) == p2(index_p2)){
+          //println("pp1= "+positionIndex( t1 + p1(index_p1) ))
+          //println("pp2= "+positionIndex( t2 + p2(index_p2) ))
+
           listTemp.clear
 
           index_pp1 = 0
           index_pp2 = 0
-          while(index_pp1 < pp1.length){
+          while(index_pp1 < positionIndex( t1 + p1(index_p1) ).length){
             loopbreak.breakable{
-            while(index_pp2 < pp2.length){
-              if( Math.abs(pp1(index_pp1) -  pp2(index_pp2))<= k )
-                listTemp += pp2(index_pp2)
-              else if(pp2(index_pp2) >  pp1(index_pp1)) loopbreak.break;
-              index_pp2 = index_pp2+1
-            }}
+            while(index_pp2 < positionIndex( t2 + p2(index_p2) ).length){
+              direction match{
+                case 1 =>{
+                  if((positionIndex( t2 + p2(index_p2) )(index_pp2) - positionIndex( t1 + p1(index_p1) )(index_pp1)>0) && (positionIndex( t2 + p2(index_p2) )(index_pp2) - positionIndex( t1 + p1(index_p1) )(index_pp1)<= k) ){
+                    listTemp += positionIndex( t2 + p2(index_p2) )(index_pp2)
+                  }
+                    else if(positionIndex( t2 + p2(index_p2) )(index_pp2) >  positionIndex( t1 + p1(index_p1) )(index_pp1)) loopbreak.break;
+                }
 
-            while(!listTemp.isEmpty && Math.abs(listTemp(0) - pp1(index_pp1)) > k){
+              case 2 =>{
+                if( Math.abs(positionIndex( t1 + p1(index_p1) )(index_pp1) -  positionIndex( t2 + p2(index_p2) )(index_pp2))<= k ){
+                  listTemp += positionIndex( t2 + p2(index_p2) )(index_pp2)
+                }
+                  else if(positionIndex( t2 + p2(index_p2) )(index_pp2) >  positionIndex( t1 + p1(index_p1) )(index_pp1)) loopbreak.break;
+              }
+            }
+              index_pp2 = index_pp2+1
+            }
+            }//end of breakable loop
+
+            while(!listTemp.isEmpty && Math.abs(listTemp(0) - positionIndex( t1 + p1(index_p1) )(index_pp1)) > k){
                 listTemp.remove(0)
-                for(ps<-listTemp){
+              }
+
+            for(ps<-listTemp){
+                    answer(p1(index_p1)) ::= positionIndex( t1 + p1(index_p1) )(index_pp1)
                     answer(p1(index_p1)) ::= ps
                 }
-            index_p1 = index_p1 +1
-            }
+            index_pp1 = index_pp1 +1
           }
+
           index_p1 = index_p1 +1
           index_p2 = index_p2 +1
         }
@@ -143,7 +132,16 @@ object AssignmentTwo {
           index_p1 = index_p1+1
         else index_p2 = index_p2+1
       }
-      println(answer)
+
+      // sort the positional indexes and print the output
+      for(v <- answer.keys){
+        //println("Doc " + v)
+        answer(v) = answer(v).reverse
+        println("Doc " + v + ": " + answer(v))
+      }
+
+
+
 return 0
 }
 
