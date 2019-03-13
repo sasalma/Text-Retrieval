@@ -1,0 +1,4 @@
+[0m[[0m[33mwarn[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/code/Text-Retrieval/assignment3/src/main/scala/edu/arizona/cs/AssignmentThree.scala:32:25: class RAMDirectory in package store is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m        val index = new RAMDirectory();[0m
+[0m[[0m[33mwarn[0m] [0m[0m                        ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
