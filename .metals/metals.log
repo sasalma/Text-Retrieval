@@ -1,2 +1,3 @@
 [33mwarn [0m Unable to automatically connect to build server.
 [33mwarn [0m Skipping build import for unsupport build tool <no build tool>
+[34minfo [0m shutting down Metals

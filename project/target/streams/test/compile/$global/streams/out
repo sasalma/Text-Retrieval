@@ -1,0 +1,94 @@
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestLanguageModel.scala:3:12: object scalatest is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.scalatest._[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestLanguageModel.scala:5:33: not found: type FlatSpec[0m
+[0m[[0m[31merror[0m] [0m[0mclass TestLanguageModel extends FlatSpec with Matchers {[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestLanguageModel.scala:5:47: not found: type Matchers[0m
+[0m[[0m[31merror[0m] [0m[0mclass TestLanguageModel extends FlatSpec with Matchers {[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestLanguageModel.scala:9:19: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m	"language model" should "rank document correctly with unsmoothed method" in {[0m
+[0m[[0m[31merror[0m] [0m[0m	                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestLanguageModel.scala:13:13: value should is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m		docs.size should be (2)[0m
+[0m[[0m[31merror[0m] [0m[0m		          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestLanguageModel.scala:13:20: not found: value be[0m
+[0m[[0m[31merror[0m] [0m[0m		docs.size should be (2)[0m
+[0m[[0m[31merror[0m] [0m[0m		                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestLanguageModel.scala:14:14: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m		docs(0).id should be ("Doc1")[0m
+[0m[[0m[31merror[0m] [0m[0m		           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestLanguageModel.scala:14:21: not found: value be[0m
+[0m[[0m[31merror[0m] [0m[0m		docs(0).id should be ("Doc1")[0m
+[0m[[0m[31merror[0m] [0m[0m		                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestLanguageModel.scala:15:14: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m		docs(1).id should be ("Doc2")[0m
+[0m[[0m[31merror[0m] [0m[0m		           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestLanguageModel.scala:15:21: not found: value be[0m
+[0m[[0m[31merror[0m] [0m[0m		docs(1).id should be ("Doc2")[0m
+[0m[[0m[31merror[0m] [0m[0m		                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestLanguageModel.scala:18:2: not found: value it[0m
+[0m[[0m[31merror[0m] [0m[0m	it should "rank documents correctly with smoothed method" in {[0m
+[0m[[0m[31merror[0m] [0m[0m	^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestLanguageModel.scala:22:13: value should is not a member of Int[0m
+[0m[[0m[31merror[0m] [0m[0m		docs.size should be (4)[0m
+[0m[[0m[31merror[0m] [0m[0m		          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestLanguageModel.scala:22:20: not found: value be[0m
+[0m[[0m[31merror[0m] [0m[0m		docs.size should be (4)[0m
+[0m[[0m[31merror[0m] [0m[0m		                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestLanguageModel.scala:23:14: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m		docs(0).id should be ("Doc1")[0m
+[0m[[0m[31merror[0m] [0m[0m		           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestLanguageModel.scala:23:21: not found: value be[0m
+[0m[[0m[31merror[0m] [0m[0m		docs(0).id should be ("Doc1")[0m
+[0m[[0m[31merror[0m] [0m[0m		                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestLanguageModel.scala:24:14: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m		docs(1).id should be ("Doc2")[0m
+[0m[[0m[31merror[0m] [0m[0m		           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestLanguageModel.scala:24:21: not found: value be[0m
+[0m[[0m[31merror[0m] [0m[0m		docs(1).id should be ("Doc2")[0m
+[0m[[0m[31merror[0m] [0m[0m		                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestLanguageModel.scala:25:14: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m		docs(2).id should be ("Doc4")[0m
+[0m[[0m[31merror[0m] [0m[0m		           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestLanguageModel.scala:25:21: not found: value be[0m
+[0m[[0m[31merror[0m] [0m[0m		docs(2).id should be ("Doc4")[0m
+[0m[[0m[31merror[0m] [0m[0m		                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestLanguageModel.scala:26:14: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m		docs(3).id should be ("Doc3")[0m
+[0m[[0m[31merror[0m] [0m[0m		           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestLanguageModel.scala:26:21: not found: value be[0m
+[0m[[0m[31merror[0m] [0m[0m		docs(3).id should be ("Doc3")[0m
+[0m[[0m[31merror[0m] [0m[0m		                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestNaiveBayes.scala:3:12: object scalatest is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.scalatest._[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestNaiveBayes.scala:5:30: not found: type FlatSpec[0m
+[0m[[0m[31merror[0m] [0m[0mclass TestNaiveBayes extends FlatSpec with Matchers {[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestNaiveBayes.scala:5:44: not found: type Matchers[0m
+[0m[[0m[31merror[0m] [0m[0mclass TestNaiveBayes extends FlatSpec with Matchers {[0m
+[0m[[0m[31merror[0m] [0m[0m                                           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestNaiveBayes.scala:10:17: value should is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  "naive bayes" should "perform well on spamDataset" in {[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestNaiveBayes.scala:15:30: value should is not a member of Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m    (score.precision > 0.95) should be (true)[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestNaiveBayes.scala:15:37: not found: value be[0m
+[0m[[0m[31merror[0m] [0m[0m    (score.precision > 0.95) should be (true)[0m
+[0m[[0m[31merror[0m] [0m[0m                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestNaiveBayes.scala:16:27: value should is not a member of Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m    (score.recall > 0.95) should be (true)[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestNaiveBayes.scala:16:34: not found: value be[0m
+[0m[[0m[31merror[0m] [0m[0m    (score.recall > 0.95) should be (true)[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestNaiveBayes.scala:17:23: value should is not a member of Boolean[0m
+[0m[[0m[31merror[0m] [0m[0m    (score.f1 > 0.95) should be (true)[0m
+[0m[[0m[31merror[0m] [0m[0m                      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/test/scala/edu/arizona/cs/TestNaiveBayes.scala:17:30: not found: value be[0m
+[0m[[0m[31merror[0m] [0m[0m    (score.f1 > 0.95) should be (true)[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m31 errors found[0m

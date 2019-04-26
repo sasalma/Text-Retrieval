@@ -1,0 +1,3 @@
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/data/Dropbox/sammi/spring2019/csc583/project/src/main/resources/snli_1.0_train_small.jsonl,/data/Dropbox/sammi/spring2019/csc583/project/target/scala-2.12/classes/snli_1.0_train_small.jsonl)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(/data/Dropbox/sammi/spring2019/csc583/project/src/main/resources/snli_1.0_train_small.txt,/data/Dropbox/sammi/spring2019/csc583/project/target/scala-2.12/classes/snli_1.0_train_small.txt)[0m
