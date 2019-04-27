@@ -37,9 +37,10 @@ object LanguageInference {
     def main(args: Array[String]) {
 	println("success!!!")
     	val source = Source.fromResource(jsonFileName)
+	var pairNumber = 0
 
-    	for(line <- source.getLines()) {
-		println("================================new data in new line !!!")
+    	for(line <- source.getLines()) { pairNumber = pairNumber + 1
+		println("===" + pairNumber + "==================new data in new line !!!")
       		//println(line)
 		val jsonResult = JSON.parseFull(line)
 		val map:Map[String,Any] = jsonResult.get.asInstanceOf[Map[String, Any]]
@@ -48,11 +49,15 @@ object LanguageInference {
 		val goldLabel = map.get("gold_label").get.asInstanceOf[String]
 		val sentence1 = map.get("sentence1").get.asInstanceOf[String]
 		val sentence2 = map.get("sentence2").get.asInstanceOf[String]
+		val sentence1_parse:Map[String,Any] = map.get("sentence1_parse").get.asInstanceOf[Map[String, Any]]	
+		val sentence1_parse_extract_VBG = sentence1_parse.get("VBG").get.asInstanceOf[String]	
 
 println("goldLabel=" + goldLabel )
 println("sentence1=" + sentence1 )
-loadInvertedIndex(sentence1)
+//loadInvertedIndex(sentence1)
 println("sentence2=" + sentence2 )
+for(VBG<-sentence1_parse_extract_VBG){
+println("extracted=" + VBG )}
 
 
 /*

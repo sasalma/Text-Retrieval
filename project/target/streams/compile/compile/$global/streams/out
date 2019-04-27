@@ -1,7 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/main/scala/edu/arizona/cs/LanguageInference.scala:80:34: ambiguous reference to overloaded definition,[0m
-[0m[[0m[31merror[0m] [0m[0mboth method + in trait MapLike of type [V1 >: Int](elem1: (String, V1), elem2: (String, V1), elems: (String, V1)*)scala.collection.mutable.Map[String,V1][0m
-[0m[[0m[31merror[0m] [0m[0mand  method + in trait MapLike of type [V1 >: Int](kv: (String, V1))scala.collection.mutable.Map[String,V1][0m
-[0m[[0m[31merror[0m] [0m[0mmatch expected type ?[0m
-[0m[[0m[31merror[0m] [0m[0m                  	invertedIndex + = (token -> 0)[0m
-[0m[[0m[31merror[0m] [0m[0m                  	              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/data/Dropbox/sammi/spring2019/csc583/project/src/main/scala/edu/arizona/cs/LanguageInference.scala:53:7: sentence1_parse is already defined as value sentence1_parse[0m
+[0m[[0m[31merror[0m] [0m[0m		val sentence1_parse = map.get("sentence1_parse").get.asInstanceOf[Map[String, Any]]	[0m
+[0m[[0m[31merror[0m] [0m[0m		    ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m
