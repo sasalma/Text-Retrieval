@@ -17,6 +17,8 @@ import scala.collection.mutable.HashMap
 import scala.collection.mutable.ListBuffer
 
 import scala.util.parsing.json._
+import scala.util.matching.Regex
+
 
 
 //import LanguageModel._
@@ -40,7 +42,7 @@ object LanguageInference {
 	var pairNumber = 0
 
     	for(line <- source.getLines()) { pairNumber = pairNumber + 1
-		println("===" + pairNumber + "==================new data in new line !!!")
+		println("=== pairNumber : " + pairNumber + "==================")
       		//println(line)
 		val jsonResult = JSON.parseFull(line)
 		val map:Map[String,Any] = jsonResult.get.asInstanceOf[Map[String, Any]]
@@ -49,19 +51,33 @@ object LanguageInference {
 		val goldLabel = map.get("gold_label").get.asInstanceOf[String]
 		val sentence1 = map.get("sentence1").get.asInstanceOf[String]
 		val sentence2 = map.get("sentence2").get.asInstanceOf[String]
+
+		//trimming the period from the end
+		var premise = sentence1.replace(".","")//.substring(0, sentence1.length-1)
+		var hypothesis = sentence2.replace(".","")//.substring(0, sentence2.length-1)
+		premise = premise.toLowerCase()
+		hypothesis = hypothesis.toLowerCase()
+
+//if(goldLabel=="neutral"){
+//if(goldLabel=="contradiction"){
+//if(goldLabel=="entailment"){
+		println("verbs in premise")
 		val sentence1_parse = map.get("sentence1_parse").get.asInstanceOf[String]
-		//val sentence1_parse:Map[String,Any] = map.get("sentence1_parse").get.asInstanceOf[Map[String, Any]]	
-		//val sentence1_parse_extract_VBG = sentence1_parse.get("VBG").get.asInstanceOf[String]	
+		val verbPattern = new Regex("\\s.VB.\\s(\\w*)")//("VP\\s.VB.\\s(\\w*)")
+		for (patternMatch <- verbPattern.findAllIn(sentence1_parse))
+			println("VB. :" + patternMatch.substring(6, patternMatch.length))
+
+		println("verbs in hypothesis")
+		val sentence2_parse = map.get("sentence2_parse").get.asInstanceOf[String]
+		for (patternMatch <- verbPattern.findAllIn(sentence2_parse))
+			println("VB. :" + patternMatch.substring(6, patternMatch.length))
+			
 
 println("goldLabel=" + goldLabel )
-println("sentence1=" + sentence1 )
-//loadInvertedIndex(sentence1)
-println("sentence2=" + sentence2 )
-
-println("sentence1_parse=" + sentence1_parse )
-//for(VBG<-sentence1_parse_extract_VBG){
-//println("extracted=" + VBG )}
-
+println("JaccardCoefficient = " + JaccardCoefficient(premise, hypothesis)  )
+println("Premise=" + premise )
+println("hypothesis=" + hypothesis )
+//}
 
 /*
 CosineScore(q)
@@ -82,7 +98,22 @@ do Scores[d]+ = w t,d × w t,q
     	}
     }
 
+
+    def JaccardCoefficient(premise:String, hypothesis:String) : Double = {
+    	loadInvertedIndex(premise)
+	var intersectionValue = 0
+	var tokensINhypothesis = 0
+	for( token <- hypothesis.split(" ") ){ tokensINhypothesis = tokensINhypothesis + 1
+		if(invertedIndex.contains(token))
+			intersectionValue = intersectionValue + 1
+		}
+
+	return (intersectionValue.toDouble)/(invertedIndex.size.toDouble + tokensINhypothesis.toDouble)
+	}
+   
+
     def loadInvertedIndex(premise:String){
+	invertedIndex.clear
 	var frequency = 0
 	for( token <- premise.split(" ") ){
 		if(!invertedIndex.contains(token)) // If this term is not already in the vocabulary
@@ -92,11 +123,11 @@ do Scores[d]+ = w t,d × w t,q
 		frequency = invertedIndex(token) +1
 		invertedIndex-= (token)
 		invertedIndex+= (token -> frequency)
-	}
-
+		}
+	/*
 	for(v <- invertedIndex.keys){
 		println(v + "   " + invertedIndex(v))
-	      }
+	      }*/
 
     }
 

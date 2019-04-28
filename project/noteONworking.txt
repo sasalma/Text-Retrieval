@@ -1,0 +1,227 @@
+*****************************************************NOTE 1 **************************************
+===5==================new data in new line !!!
+goldLabel=entailment
+JaccardCoefficient = 0.0
+Premise=Children smiling and waving at camera
+hypothesis=There are children present
+
+After using lowercase
+===5==================new data in new line !!!
+goldLabel=entailment
+JaccardCoefficient = 0.1
+Premise=children smiling and waving at camera
+hypothesis=there are children present
+
+
+
+
+*****************************************************NOTE 2 **************************************
+sbt:project> run
+[info] Running edu.arizona.cs.LanguageInference 
+success!!!
+===1==================new data in new line !!!
+===2==================new data in new line !!!
+VB. :jumps
+goldLabel=contradiction
+JaccardCoefficient = 0.16666666666666666
+Premise=a person on a horse jumps over a broken down airplane
+hypothesis=a person is at a diner, ordering an omelette
+===3==================new data in new line !!!
+===4==================new data in new line !!!
+===5==================new data in new line !!!
+===6==================new data in new line !!!
+VB. :smiling
+goldLabel=contradiction
+JaccardCoefficient = 0.0
+Premise=children smiling and waving at camera
+hypothesis=the kids are frowning
+===7==================new data in new line !!!
+VB. :is
+VB. :jumping
+goldLabel=contradiction
+JaccardCoefficient = 0.16666666666666666
+Premise=a boy is jumping on skateboard in the middle of a red bridge
+hypothesis=the boy skates down the sidewalk
+===8==================new data in new line !!!
+===9==================new data in new line !!!
+===10==================new data in new line !!!
+
+[info] Packaging /data/Dropbox/sammi/spring2019/csc583/code/Text-Retrieval/project/target/scala-2.12/project_2.12-1.0-
+===1==================new data in new line !!!
+===2==================new data in new line !!!
+===3==================new data in new line !!!
+VB. :jumps
+goldLabel=entailment
+JaccardCoefficient = 0.3125
+Premise=a person on a horse jumps over a broken down airplane
+hypothesis=a person is outdoors, on a horse
+===4==================new data in new line !!!
+===5==================new data in new line !!!
+VB. :smiling
+goldLabel=entailment
+JaccardCoefficient = 0.1
+Premise=children smiling and waving at camera
+hypothesis=there are children present
+===6==================new data in new line !!!
+===7==================new data in new line !!!
+===8==================new data in new line !!!
+VB. :is
+VB. :jumping
+goldLabel=entailment
+JaccardCoefficient = 0.16666666666666666
+Premise=a boy is jumping on skateboard in the middle of a red bridge
+hypothesis=the boy does a skateboarding trick
+===9==================new data in new line !!!
+===10==================new data in new line !!!
+
+
+[info] Packaging /data/Dropbox/sammi/spring2019/csc583/code/Text-Retrieval/project/target/scala-2.12/project_2.12-1.0-
+===1==================new data in new line !!!
+VB. :jumps
+goldLabel=neutral
+JaccardCoefficient = 0.2222222222222222
+Premise=a person on a horse jumps over a broken down airplane
+hypothesis=a person is training his horse for a competition
+===2==================new data in new line !!!
+===3==================new data in new line !!!
+===4==================new data in new line !!!
+VB. :smiling
+goldLabel=neutral
+JaccardCoefficient = 0.16666666666666666
+Premise=children smiling and waving at camera
+hypothesis=they are smiling at their parents
+===5==================new data in new line !!!
+===6==================new data in new line !!!
+===7==================new data in new line !!!
+===8==================new data in new line !!!
+===9==================new data in new line !!!
+VB. :is
+VB. :jumping
+goldLabel=neutral
+JaccardCoefficient = 0.16666666666666666
+Premise=a boy is jumping on skateboard in the middle of a red bridge
+hypothesis=the boy is wearing safety equipment
+===10==================new data in new line !!!
+VB. :sits
+VB. :smile
+goldLabel=neutral
+JaccardCoefficient = 0.15384615384615385
+Premise=an older man sits with his orange juice at a small table in a coffee shop while employees in bright colored shirts smile in the background
+hypothesis=an older man drinks his juice as he waits for his daughter to get off work
+[success] Total time: 37 s, completed Apr 28, 2019, 6:51:36 AM
+sbt:project> 
+
+
+
+
+
+
+*****************************************************NOTE 2 **************************************
+without stemming or lemmatization
+
+=== pairNumber : 1==================
+verbs in premise
+VB. :jumps
+verbs in hypothesis
+VB. :is
+VB. :training
+goldLabel=neutral
+JaccardCoefficient = 0.2222222222222222
+Premise=a person on a horse jumps over a broken down airplane
+hypothesis=a person is training his horse for a competition
+=== pairNumber : 2==================
+verbs in premise
+VB. :jumps
+verbs in hypothesis
+VB. :is
+VB. :ordering
+goldLabel=contradiction
+JaccardCoefficient = 0.16666666666666666
+Premise=a person on a horse jumps over a broken down airplane
+hypothesis=a person is at a diner, ordering an omelette
+=== pairNumber : 3==================
+verbs in premise
+VB. :jumps
+verbs in hypothesis
+VB. :is
+goldLabel=entailment
+JaccardCoefficient = 0.3125
+Premise=a person on a horse jumps over a broken down airplane
+hypothesis=a person is outdoors, on a horse
+=== pairNumber : 4==================
+verbs in premise
+VB. :smiling
+VB. :waving
+verbs in hypothesis
+VB. :are
+VB. :smiling
+goldLabel=neutral
+JaccardCoefficient = 0.16666666666666666
+Premise=children smiling and waving at camera
+hypothesis=they are smiling at their parents
+=== pairNumber : 5==================
+verbs in premise
+VB. :smiling
+VB. :waving
+verbs in hypothesis
+VB. :are
+goldLabel=entailment
+JaccardCoefficient = 0.1
+Premise=children smiling and waving at camera
+hypothesis=there are children present
+=== pairNumber : 6==================
+verbs in premise
+VB. :smiling
+VB. :waving
+verbs in hypothesis
+VB. :are
+VB. :frowning
+goldLabel=contradiction
+JaccardCoefficient = 0.0
+Premise=children smiling and waving at camera
+hypothesis=the kids are frowning
+=== pairNumber : 7==================
+verbs in premise
+VB. :is
+VB. :jumping
+verbs in hypothesis
+VB. :skates
+goldLabel=contradiction
+JaccardCoefficient = 0.16666666666666666
+Premise=a boy is jumping on skateboard in the middle of a red bridge
+hypothesis=the boy skates down the sidewalk
+=== pairNumber : 8==================
+verbs in premise
+VB. :is
+VB. :jumping
+verbs in hypothesis
+VB. :does
+goldLabel=entailment
+JaccardCoefficient = 0.16666666666666666
+Premise=a boy is jumping on skateboard in the middle of a red bridge
+hypothesis=the boy does a skateboarding trick
+=== pairNumber : 9==================
+verbs in premise
+VB. :is
+VB. :jumping
+verbs in hypothesis
+VB. :is
+VB. :wearing
+goldLabel=neutral
+JaccardCoefficient = 0.16666666666666666
+Premise=a boy is jumping on skateboard in the middle of a red bridge
+hypothesis=the boy is wearing safety equipment
+=== pairNumber : 10==================
+verbs in premise
+VB. :sits
+VB. :smile
+verbs in hypothesis
+VB. :drinks
+VB. :waits
+goldLabel=neutral
+JaccardCoefficient = 0.15384615384615385
+Premise=an older man sits with his orange juice at a small table in a coffee shop while employees in bright colored shirts smile in the background
+hypothesis=an older man drinks his juice as he waits for his daughter to get off work
+[success] Total time: 22 s, completed Apr 28, 2019, 7:13:57 AM
+
+
