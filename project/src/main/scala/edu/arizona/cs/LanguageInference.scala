@@ -49,15 +49,18 @@ object LanguageInference {
 		val goldLabel = map.get("gold_label").get.asInstanceOf[String]
 		val sentence1 = map.get("sentence1").get.asInstanceOf[String]
 		val sentence2 = map.get("sentence2").get.asInstanceOf[String]
-		val sentence1_parse:Map[String,Any] = map.get("sentence1_parse").get.asInstanceOf[Map[String, Any]]	
-		val sentence1_parse_extract_VBG = sentence1_parse.get("VBG").get.asInstanceOf[String]	
+		val sentence1_parse = map.get("sentence1_parse").get.asInstanceOf[String]
+		//val sentence1_parse:Map[String,Any] = map.get("sentence1_parse").get.asInstanceOf[Map[String, Any]]	
+		//val sentence1_parse_extract_VBG = sentence1_parse.get("VBG").get.asInstanceOf[String]	
 
 println("goldLabel=" + goldLabel )
 println("sentence1=" + sentence1 )
 //loadInvertedIndex(sentence1)
 println("sentence2=" + sentence2 )
-for(VBG<-sentence1_parse_extract_VBG){
-println("extracted=" + VBG )}
+
+println("sentence1_parse=" + sentence1_parse )
+//for(VBG<-sentence1_parse_extract_VBG){
+//println("extracted=" + VBG )}
 
 
 /*
