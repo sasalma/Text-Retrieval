@@ -1,17 +1,1 @@
-[0m[[0m[0minfo[0m] [0m[0mPackaging /data/Dropbox/sammi/spring2019/csc583/code/Text-Retrieval/project/target/scala-2.12/project_2.12-1.0-SNAPSHOT.jar ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	snli_1.0_train_small.txt[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /data/Dropbox/sammi/spring2019/csc583/code/Text-Retrieval/project/target/scala-2.12/classes/snli_1.0_train_small.txt[0m
-[0m[[0m[0mdebug[0m] [0m[0m	edu[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /data/Dropbox/sammi/spring2019/csc583/code/Text-Retrieval/project/target/scala-2.12/classes/edu[0m
-[0m[[0m[0mdebug[0m] [0m[0m	edu/arizona/cs[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /data/Dropbox/sammi/spring2019/csc583/code/Text-Retrieval/project/target/scala-2.12/classes/edu/arizona/cs[0m
-[0m[[0m[0mdebug[0m] [0m[0m	edu/arizona[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /data/Dropbox/sammi/spring2019/csc583/code/Text-Retrieval/project/target/scala-2.12/classes/edu/arizona[0m
-[0m[[0m[0mdebug[0m] [0m[0m	snli_1.0_train_small.jsonl[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /data/Dropbox/sammi/spring2019/csc583/code/Text-Retrieval/project/target/scala-2.12/classes/snli_1.0_train_small.jsonl[0m
-[0m[[0m[0mdebug[0m] [0m[0m	edu/arizona/cs/LanguageInference.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /data/Dropbox/sammi/spring2019/csc583/code/Text-Retrieval/project/target/scala-2.12/classes/edu/arizona/cs/LanguageInference.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	edu/arizona/cs/LanguageInference$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /data/Dropbox/sammi/spring2019/csc583/code/Text-Retrieval/project/target/scala-2.12/classes/edu/arizona/cs/LanguageInference$.class[0m
-[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m
+[0m[[0m[0mdebug[0m] [0m[0mJar uptodate: /data/Dropbox/sammi/spring2019/csc583/code/Text-Retrieval/project/target/scala-2.12/project_2.12-1.0-SNAPSHOT.jar[0m
